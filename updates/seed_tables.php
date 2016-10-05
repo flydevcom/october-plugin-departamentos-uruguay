@@ -29,21 +29,6 @@
                 fclose($handle);
             }
 
-
-
-
-            // $user = User::create([
-            //     'email'                 => 'user@user.com',
-            //     'login'                 => 'user',
-            //     'password'              => 'user',
-            //     'password_confirmation' => 'user',
-            //     'first_name'            => 'Adam',
-            //     'last_name'             => 'Person',
-            //     'is_activated'          => true
-            // ]);
-
-
-
         }
 
     }
