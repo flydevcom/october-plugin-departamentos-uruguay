@@ -1,6 +1,6 @@
-<select class="form-control custom-select">
+<select id="<?php echo $this->formField->getId() ?>" name="<?php echo $this->formField->getName() ?>" class="form-control custom-select">
     <option value="">&nbsp;</option>
 <?php foreach($departamentos as $id => $name): ?>
-    <option value="<?php echo $id ?>"><?php echo $name ?></option>
+    <option value="<?php echo $id ?>"<?php echo ($this->getLoadValue() == $id) ? ' selected="selected"' : '' ?>><?php echo $name ?></option>
 <?php endforeach ?>
 </select>
