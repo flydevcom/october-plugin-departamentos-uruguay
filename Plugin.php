@@ -20,10 +20,8 @@
 
         public function registerFormWidgets() {
             return [
-                'Martin\Departamentos\Departamentos' => [
-                    'label' => 'Departamentos Dropdown',
-                    'code'  => 'departamentosdropdown'
-                ]
+                'Martin\Departamentos\Departamentos' => ['label' => 'Departamentos Dropdown', 'code'  => 'dropdowndepartamentos'],
+                'Martin\Departamentos\Localidades'   => ['label' => 'Localidades Dropdown'  , 'code'  => 'dropdownlocalidades']
             ];
         }
 

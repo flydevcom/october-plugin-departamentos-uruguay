@@ -8,6 +8,10 @@
 
         public $table = 'martin_localidades';
 
+        public $belongsTo = [
+            'departamento' => 'Martin\Departamentos\Models\Departamento'
+        ];
+
     }
 
 ?>

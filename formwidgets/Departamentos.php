@@ -10,7 +10,7 @@
 
         public function widgetDetails() {
             return [
-                'name'        => 'Departamentos Dropdown',
+                'name'        => 'Dropdown Departamentos',
                 'description' => 'Dropdown con los Departamentos de Uruguay'
             ];
         }
