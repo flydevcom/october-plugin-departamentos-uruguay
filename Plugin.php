@@ -18,6 +18,15 @@
 
         }
 
+        public function registerFormWidgets() {
+            return [
+                'Martin\Departamentos\Departamentos' => [
+                    'label' => 'Departamentos Dropdown',
+                    'code'  => 'departamentosdropdown'
+                ]
+            ];
+        }
+
     }
 
 ?>
