@@ -1,9 +1,9 @@
-<select class="form-control custom-select">
+<select id="<?php echo $this->formField->getId() ?>" name="<?php echo $this->formField->getName() ?>" class="form-control custom-select">
     <option value="">&nbsp;</option>
 <?php foreach($localidades as $departamento => $localidad): ?>
     <optgroup label="<?php echo $departamento ?>">
         <?php foreach($localidad as $id => $name): ?>
-            <option value="<?php echo $id ?>"><?php echo $name ?></option>
+            <option value="<?php echo $id ?>"<?php echo ($this->getLoadValue() == $id) ? ' selected="selected"' : '' ?>><?php echo $name ?></option>
         <?php endforeach ?>
     </optgroup>
 <?php endforeach ?>
