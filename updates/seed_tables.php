@@ -10,14 +10,24 @@
 
         public function run() {
 
-            $file = plugins_path('/martin/departamentos/updates/seed_data.csv');
+            $file = plugins_path('/martin/departamentos/updates/seed_departamentos.csv');
+            if(($handle = fopen($file, 'r')) !== FALSE) {
+                while(($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+                    $departamento       = new Departamento;
+                    $departamento->id   = $data[0];
+                    $departamento->name = strtoupper($data[1]);
+                    $departamento->save();
+                }
+                fclose($handle);
+            }
+
+
+            $file = plugins_path('/martin/departamentos/updates/seed_localidades.csv');
 
             if(($handle = fopen($file, 'r')) !== FALSE) {
                 while(($data = fgetcsv($handle, 0, ",")) !== FALSE) {
 
-                    $departamento = Departamento::firstOrCreate([
-                        'name' => $data[0]
-                    ]);
+                    $departamento = Departamento::where('name', $data[0])->first();
 
                     $localidad = Localidad::firstOrCreate([
                         'departamento_id' => $departamento->id,
